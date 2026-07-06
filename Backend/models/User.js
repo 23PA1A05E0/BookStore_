@@ -22,8 +22,16 @@ const userSchema = new mongoose.Schema(
 
     role: {
       type: String,
-      enum: ["user", "admin"],
+      enum: ["user", "admin", "organizer"],
       default: "user",
+    },
+    isApproved: {
+      type: Boolean,
+      default: true,
+    },
+    favoriteGenre: {
+      type: String,
+      default: "",
     },
   },
   {
